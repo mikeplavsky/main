@@ -26,5 +26,6 @@ int main() {
 
   for( auto i: a3){
       cout << i << endl;
+  }
 
 }
