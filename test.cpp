@@ -19,7 +19,10 @@ struct Letter {
   int size;
 };
 
-Letter letters[]{{"man", "next", 20 },{"lete", "coffee", 34}};
+Letter letters[]{
+  {"man", "next", 20 },
+  {"lete", "coffee", 34},
+  {"macho", "grando", 56}};
 
 int main() {
 
@@ -35,6 +38,10 @@ int main() {
 
   for( auto i: a3){
       cout << i << endl;
+  }
+
+  for( auto i: letters){
+      cout << i.from << endl;
   }
 
 }
