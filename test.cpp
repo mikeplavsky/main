@@ -1,6 +1,7 @@
 #include <iostream> 
 #include <sstream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -34,7 +35,7 @@ int main() {
 
   cout << message( n );
 
-  vector<int> a3{1,2,3};
+  vector<int> a3{1,2,3,10,12};
 
   for( auto i: a3){
       cout << i << endl;
@@ -43,5 +44,15 @@ int main() {
   for( auto i: letters){
       cout << i.from << endl;
   }
+
+  int total = 0;
+  for_each( begin(a3), end(a3), [&total] (int x) {
+      total += x; });
+  cout << total << endl; 
+
+  total = 1;
+  auto mult = [&total] (int x) {total *= x;};
+  for_each(begin(a3), end(a3), mult);
+  cout << total << endl;
 
 }
