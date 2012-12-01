@@ -13,8 +13,17 @@ string message(string name) {
 
 }
 
+struct Letter {
+  string from;
+  string to;
+  int size;
+};
+
+Letter letters[]{{"man", "next", 20 },{"lete", "coffee", 34}};
+
 int main() {
 
+  cout << letters[1].from << endl;
   cout << "What's your name?" << endl;
 
   string n;
