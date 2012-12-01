@@ -36,6 +36,7 @@ int main() {
   cout << message( n );
 
   vector<int> a3{1,2,3,10,12};
+  decltype(a3) a4{56,37,78,98};
 
   for( auto i: a3){
       cout << i << endl;
@@ -52,7 +53,7 @@ int main() {
 
   total = 1;
   auto mult = [&total] (int x) {total *= x;};
-  for_each(begin(a3), end(a3), mult);
+  for_each(begin(a4), end(a4), mult);
   cout << total << endl;
 
 }
