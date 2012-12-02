@@ -4,6 +4,7 @@
 #include <algorithm>
 
 using namespace std;
+template<typename First, typename... Rest> class tuple;
 
 string message(string name) {
 
@@ -55,5 +56,6 @@ int main() {
   auto mult = [&total] (int x) {total *= x;};
   for_each(begin(a4), end(a4), mult);
   cout << total << endl;
+
 
 }
